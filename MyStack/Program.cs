@@ -7,15 +7,21 @@ namespace MyStack
         static void Main(string[] args)
         {
             Stack<int> myStack = new Stack<int>();
-            myStack.Push(1);
-            myStack.Push(2);
-            myStack.Push(3);
-         
+            for (int i = 1; i <= 3; i++)
+            {
+                myStack.Push(i);
+            }
+
+            Console.WriteLine(myStack.Peek());
+
             try
             {
+                myStack.Pop();
                 Console.WriteLine(myStack.Peek());
                 myStack.Pop();
+                Console.WriteLine(myStack.Peek());
                 myStack.Pop();
+                Console.WriteLine(myStack.Peek());
                 myStack.Pop();
                 Console.WriteLine(myStack.Peek());
             }
